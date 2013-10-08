@@ -1,0 +1,10 @@
+//  c:\ado\personal\lean3.scheme
+//  Framed plot area; no gridlines; legend 6 o'clock
+//  version 1.0   17jul2013
+//  Author:   Roberto E Ferrer
+
+#include lean1
+
+// // Legend outside in lower part; 3 columns.
+clockdir legend_position     6
+numstyle legend_cols         3

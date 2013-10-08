@@ -19,7 +19,7 @@
 *
 * 1) -aindex- calculate the weights for the index using only non-missing data
 * 2) -aindex- stardardized al variables son mean is zero and standard deviation
-*     is equal to 1
+*     is equal to 1. TEST.
 *
 * Syntax:
 * =======

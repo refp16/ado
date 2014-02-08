@@ -99,10 +99,24 @@ U
 
 foreach manual of local manuals8 {
     tempfile temp
-	display "downloading all`manual'files`compresstype' ..."
-	display `""`webstub'/`stataver'/all`manual'files`compresstype'""'
+	display "downloading all`manual'files`compresstype' ..." // this works
+	display `""`webstub'/`stataver'/all`manual'files`compresstype'""' 
+	
+	*copy "`webstub'/`stataver'/all`manual'files`compresstype'" "~/", replace // this works
+	
+	/*
+	*this works
+	copy "~/try/allRfiles.tar" "`temp'", replace
+	copy "`temp'" "~/try/allRfiles2.tar", replace
+	*/
+
+	copy "~/try/git-multi-status.zip" "`temp'", replace
+	copy "`temp'" "~/try/git-multi-status.zip2", replace
+	
+	unzipfile "~/try/git-multi-status.zip"
+	
 	*copy http://www.stata-press.com/data/r13/allRfiles.tar
-	copy "`webstub'/`stataver'/all`manual'files`compresstype'" "~/", replace // this works
+	
     *copy "`webstub'/`stataver'/all`manual'files`compresstype'", replace
 	*unzipfile "all`manual'files`compresstype'"
 	*unzipfile "all`manual'files`compresstype'", replace
